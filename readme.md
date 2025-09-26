@@ -1,6 +1,6 @@
-# AI Interview Bot 🤖
+# Interview Preparation Chatbot
 
-An intelligent interview preparation tool that conducts technical interviews, evaluates responses, and provides personalized feedback using AI. Built with LangGraph for orchestrating complex workflows and powered by Groq's fast inference API.
+An interview preparation tool that conducts technical interviews, evaluates responses, and provides personalized feedback using AI. Built with LangGraph for orchestrating complex workflows and powered by Groq's fast inference API.
 
 ## What is AI Interview Bot?
 
