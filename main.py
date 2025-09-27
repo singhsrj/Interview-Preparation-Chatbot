@@ -4,13 +4,12 @@ from pydantic import BaseModel, Field
 from tavily import TavilyClient
 
 from langchain_groq import ChatGroq
-from langchain_core.messages import SystemMessage, HumanMessage, ChatMessage
+from langchain_core.messages import  HumanMessage
 from dotenv import load_dotenv
 load_dotenv()
 import os
-from langchain_community.tools.tavily_search import TavilySearchResults
-from langchain_core.prompts import ChatPromptTemplate, ChatMessagePromptTemplate
-from langchain_core.output_parsers import JsonOutputParser, StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import JsonOutputParser
 
 #groq
 groq_api_key = os.getenv("GROQ_API_KEY")
@@ -433,12 +432,18 @@ def build_graph():
 
 # Test the graph
 app = build_graph()
+from extract_data_from_resume import extract_text_from_pdf,extract_sections,clean_and_structure
+pdf_path = "C:/Users/suraj/Desktop/Interview Preparation Chatbot/resume_20_09.pdf"  # replace with your resume file
+text = extract_text_from_pdf(pdf_path)
+sections = extract_sections(text)
+candidate_data = clean_and_structure(sections)
+
 
 # Example initial state
 init_state: GraphState = {
-    "job_role": "Data Scientist",
+    "job_role": "Deep Learning Intern",
     "job_role_context": "",
-    "candidate_data": [],
+    "candidate_data": candidate_data,
     "generated_qas": [],
     "evaluation_feedback": [],
     "current_q_index": 0,
