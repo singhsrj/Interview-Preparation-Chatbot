@@ -19,7 +19,6 @@ evaluator_llm = ChatGroq(model ="Gemma2-9b-It",groq_api_key=groq_api_key)
 from pydantic import BaseModel, Field, conint
 from typing import List
 
-
 #--------------------------------------------------------------------------------------------------------------
 class Evaluation(BaseModel):
     """A structured evaluation of the user's interview answer."""
