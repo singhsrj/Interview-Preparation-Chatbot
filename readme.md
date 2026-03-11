@@ -143,7 +143,7 @@ init_state = {
 # Start the interview
 final_state = app.invoke(init_state)
 ```
-
+[![Coverage Status](https://coveralls.io/repos/github/singhsrj/Interview-Preparation-Chatbot/badge.png?branch=main)](https://coveralls.io/github/singhsrj/Interview-Preparation-Chatbot?branch=main)
 ## Future Scope of Improvements
 
 ### 🖥️ User Interface
